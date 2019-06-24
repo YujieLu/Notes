@@ -108,6 +108,7 @@ APT::Periodic::Unattended-Upgrade "0";
 要在Nano文本编辑器中保存文件，请按Ctrl+O，然后按Enter确认文件名，按Ctrl+X退出，然后重新启动计算机。
 
 
-# 18.04开机自动启动
-[18.04开机自动启动 不好使](https://blog.csdn.net/time_future/article/details/85805298)
-[ros 开机启动 测试中](https://blog.csdn.net/baidu_28236027/article/details/53116865)
+
+
+
+
