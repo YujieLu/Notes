@@ -69,7 +69,7 @@ fi
 #forever start index.js --watch --name myRobot > $HOME/nodejs_test.log 2>&1
 
 # Punch it.
-roslaunch $LAUNCH_FILENAME &
+roslaunch $LAUNCH_FILENAME > $log_path/start.log 2>&1 &
 PID=$!
 
 log info "navigator: Started roslaunch as background process, PID $PID, ROS_LOG_DIR=$ROS_LOG_DIR"
