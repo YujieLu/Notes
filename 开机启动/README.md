@@ -22,6 +22,10 @@
         rosrun robot_upstart install --user $USER --logdir $HOME/.ros/log navigator/launch/run_all_withoutrviz.launch
    ```
   3) 修改/usr/sbin/navigator-start,roslaunch 前不使用setuidpid,[示例](https://github.com/YujieLu/Notes/blob/master/%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/navigator-start)
+  ```
+    sudo mv /usr/sbin/navigator-start /usr/sbin/navigator-start.bak
+    sudo mv navigator-start /usr/sbin/navigator-start
+  ```
 
   4) 修改/lib/systemd/system/navigator.service,在[Service]后面添加User=vn,可以使用下列代码自动生成
    ```
