@@ -21,7 +21,8 @@
    ```
         rosrun robot_upstart install --user $USER --logdir $HOME/.ros/log navigator/launch/run_all_withoutrviz.launch
    ```
-  3) 修改/usr/sbin/navigator-start,roslaunch 前不使用setuidpid
+  3) 修改/usr/sbin/navigator-start,roslaunch 前不使用setuidpid,[示例](https://github.com/YujieLu/Notes/blob/master/%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8/navigator-start)
+
   4) 修改/lib/systemd/system/navigator.service,在[Service]后面添加User=vn,可以使用下列代码自动生成
    ```
         echo "
@@ -49,5 +50,13 @@
    ```
         ps -ef |grep ros |grep -v grep
    ```
+## 自动登录
+修改/etc/gdm3/custom.conf，在[daemon]后面添加下列代码即可
+
+```
+     AutomaticLogin=username
+     AutomaticLoginEnable=True
+```
+
 
 
