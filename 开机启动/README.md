@@ -28,7 +28,8 @@
         echo "
         [Unit]
         Description=\"bringup navigator\"
-        After=network.target
+        After=network-online.target
+        Wants=network-online.target
 
         [Service]
         Type=simple
