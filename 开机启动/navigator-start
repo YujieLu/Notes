@@ -64,9 +64,12 @@ if [ "$?" != "0" ]; then
   exit 1
 fi
 
-#cd $HOME/nodejs_ws/web
-# npm run start_dev > $HOME/nodejs_test.log 2>&1
-#forever start index.js --watch --name myRobot > $HOME/nodejs_test.log 2>&1
+# to add server start, uncomment following lines
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# cd $HOME/nodejs_ws/web
+# npm run start_dev > $log_path/start_server.log 2>&1
 
 # Punch it.
 roslaunch $LAUNCH_FILENAME > $log_path/start.log 2>&1 &
